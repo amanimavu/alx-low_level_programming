@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc puts.c -o puts 
+gcc $CPUTS -o puts 
 ./puts
