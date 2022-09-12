@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-	char alphabet;
-	char ALPHABET;
+	char alphabet_l;
+	char alphabet_u;
 
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	for (alphabet_l = 'a'; alphabet_l <= 'z'; alphabet_l++)
 		putchar(alphabet);
-	for (alphabet = 'A'; alphabet <= 'Z'; alphabet++)
-		putchar(alphabet);
+	for (alphabet_u = 'A'; alphabet_u <= 'Z'; alphabet_u++)
+		putchar(alphabet_u);
 	putchar('\n');
 
 	return (0);
