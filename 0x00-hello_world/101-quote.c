@@ -4,7 +4,7 @@
  * Description: program displays text using
  * fprintf on standard error
  *
- * Return: 0 is always returned
+ * Return: 1(FAILURE) is always returned
  */
 int main(void)
 {
@@ -12,5 +12,5 @@ int main(void)
 	char str2[25] = "Dora Korpar, 2015-10-19\n";
 
 	fprintf(stderr, "%s useful\" - %s", str1, str2);
-	return (0);
+	return (1);
 }
