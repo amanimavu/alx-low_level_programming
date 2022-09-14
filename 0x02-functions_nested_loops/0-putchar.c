@@ -1,14 +1,22 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - entry point of the program
- * Description: the program displays a statement
- * with a new line
- *
- *Return: the function always return 0
- */
+  * print_text - displays single character of text
+  * @string: is an array of character (string)
+  * Description: loops through a string and extracts
+  * characters, then displays them
+  *
+  * Return: Doesn't return any value
+  */
 
-int main(void)
+void print_text(char string[])
 {
-	puts("_putchar");
-	return (0);
+	int i;
+
+	i = 0;
+	while (string[i] != '.')
+	{
+		_putchar(string[i]);
+		++i;
+	}
+	_putchar('\n');
 }
