@@ -1,6 +1,6 @@
 /**
  * _abs - computes the absolute value of an integer
- * @int - int type parameter
+ * @x: int type parameter
  *
  * Description: uses if...else logic to determine whether
  * an integer is +ve, -ve or 0. Multipling -ve integers with -
