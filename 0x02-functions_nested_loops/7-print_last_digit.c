@@ -14,7 +14,7 @@ int print_last_digit(int num)
 	int abs_num;
 	int last_digit;
 
-	if(num < 0)
+	if (num < 0)
 		abs_num = num * -1;
 	else
 		abs_num = num;
