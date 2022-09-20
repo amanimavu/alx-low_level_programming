@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _puts - print a string followed by newline
  * @str: string array
