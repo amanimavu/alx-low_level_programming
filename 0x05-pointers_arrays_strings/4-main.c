@@ -13,8 +13,6 @@ int main(void)
 	str2 = "";
 	str3 = "Holberton!";
 
-	_putchar('y');
-
 	print_rev(str1);
 	print_rev(str2);
 	print_rev(str3);

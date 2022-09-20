@@ -12,13 +12,11 @@ void print_rev(char *s)
 	int j;
 
 	i = 0;
-	printf("loop starting");
 	while (s[i] != '\0')
 	{
 		i++;
 	}
-	_putchar(i);
-	for (j = i; j >= 0; i--)
+	for (j = i; j >= 0; j--)
 	{
 		_putchar(s[j]);
 	}
