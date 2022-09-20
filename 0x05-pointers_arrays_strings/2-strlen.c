@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * _strlen - find the length of a string
  * @s: string whose length is to evaluated
@@ -7,5 +8,12 @@
 
 int _strlen(char *s)
 {
-	return (sizeof(s) - 1);
+	int i;
+
+	i = 1;
+	while(s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
