@@ -16,10 +16,12 @@ char *_strncat(char *dest, char *src, int n)
 	int i;
 	int len_src;
 	int len_dest;
+	int bytes_to_print;
 
 	len_src = strlen(src);
 	len_dest = strlen(dest);
-	for (i = 0; i <= (n - 1); i++)
+	bytes_to_print = n > len_src ? len_src : n -1;
+	for (i = 0; i <= bytes_to_print; i++)
 	{
 		*(dest + (i + len_dest)) = *(src + i);
 	}
