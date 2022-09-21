@@ -3,6 +3,8 @@
 
 /**
  * _strcat - concatanate source string to destinataion string
+ * Description: Used for loop to add charzcters of source string
+ * to the destinantion string
  * @dest: string whose characters are to be added
  * @src: string whose characters are added to dest string
  *
