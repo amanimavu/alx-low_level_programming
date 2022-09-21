@@ -14,10 +14,8 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 	int len_src;
-	int len_dest;
 
 	len_src = strlen(src);
-	len_dest = strlen(dest);
 	n = n > len_src ? len_src : n - 1;
 	for (i = 0; i <= n; i++)
 	{
