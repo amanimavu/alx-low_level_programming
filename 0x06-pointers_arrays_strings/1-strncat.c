@@ -20,7 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	len_src = strlen(src);
 	len_dest = strlen(dest);
-	bytes_to_print = n > len_src ? len_src : n -1;
+	bytes_to_print = n > len_src ? len_src : n - 1;
 	for (i = 0; i <= bytes_to_print; i++)
 	{
 		*(dest + (i + len_dest)) = *(src + i);
