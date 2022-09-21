@@ -6,12 +6,12 @@
  * to destination string
  * @dest: destination string to which characters are to be added to
  * @src: source string from which characters are to be extracted
- * n: number of bytes to extract
+ * @n: number of bytes to extract
  *
  * Return: destination string
  */
 
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int len_src;
