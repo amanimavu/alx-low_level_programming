@@ -13,7 +13,7 @@ char *string_toupper(char *s)
 	{
 		if (*s >= 'a' && *s <= 'z')
 		{
-			*s = *s - 32;
+			*s -= 'a' - 'A';
 		}
 		s++;
 	}
