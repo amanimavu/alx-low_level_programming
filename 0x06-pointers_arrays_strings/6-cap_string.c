@@ -6,7 +6,6 @@
  * Return: return an integer, 1 is c is a separator , 0 otherwise
  */
 
-int is_separator(char);
 
 int is_separator(char c)
 {
