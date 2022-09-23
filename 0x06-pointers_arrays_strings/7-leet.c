@@ -9,21 +9,25 @@
 char *leet(char *s)
 {
 	int i;
+	int j;
+	char char_and_code[] = "a1A1e3E3o0O0t7T7l1L1";
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		if (*(s + i) == 'a' || *(s + i) == 'A')
-			*(s + i) = '4';
-		else if (*(s + i) == 'e' || *(s + i) == 'E')
-			*(s + i) = '3';
-		else if (*(s + i) == 'o' || *(s + i) == 'O')
-			*(s + i) = '0';
-		else if (*(s + i) == 't' || *(s + i) == 'T')
-			*(s + i) = '7';
-		else if (*(s + i) == 'l' || *(s + i) == 'L')
-			*(s + i) = '1';
-		else
-			continue;
+		for (j = 0; char_and_code[j] != '\0'; j++)
+		{
+			if (char_and_code[j] == *(s + i))
+			{
+				*(s +i) = char_and_code[j + 1];
+				break;
+			}
+			else
+			{
+				continue;
+			}
+		}
+		i++;
 	}
 	return (s);
 }
