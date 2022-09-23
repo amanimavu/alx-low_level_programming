@@ -6,15 +6,17 @@
  * Return: return an integer, 1 is c is a separator , 0 otherwise
  */
 
+int is_separator(char);
+
 int is_separator(char c)
 {
 	int i;
 	char separators[] = " \n\t,;.!?\"(){}";
 
 	i = 0;
-	while (separator[i] != '\0')
+	while (separators[i] != '\0')
 	{
-		if (c == separator)
+		if (c == separators[i])
 			return (1);
 		i++;
 	}
@@ -34,19 +36,19 @@ char *cap_string(char *s)
 	i = 0;
 	while (*(s + i) != '\0')
 	{
-		if (*(s + 1) >= 'a' && *(s + i) <= 'z')
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
 			if (i == 0)
 			{
-				*(s + 1) -= 'a' - 'A';
+				*(s + i) -= 'a' - 'A';
 			}
 			else
 			{
 				if (is_separator(*(s + (i - 1))))
 					*(s + i) -= 'a' - 'A';
 			}
-			i++;
 		}
+		i++;
 	}
 	return (s);
 }
