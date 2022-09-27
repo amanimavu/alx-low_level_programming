@@ -14,7 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, len_j;
 
 	len_j = strlen(needle);
-	if (*neddle == 0)
+	if (*needle == 0)
 		return (haystack);
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
