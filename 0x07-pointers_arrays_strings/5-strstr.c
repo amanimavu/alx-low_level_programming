@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * _strstr - checks if a substring(more than 1 char) exists in a string
