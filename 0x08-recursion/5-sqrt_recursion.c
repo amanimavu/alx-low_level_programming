@@ -7,7 +7,7 @@
  * Return: squareroot of num
  */
 
-int find_sqrt(num, iterator)
+int find_sqrt(int num, int iterator)
 {
 	if (num == (iterator *iterator))
 		return (iterator);
