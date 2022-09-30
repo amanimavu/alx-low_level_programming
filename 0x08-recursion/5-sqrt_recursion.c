@@ -9,7 +9,7 @@
 
 int find_sqrt(int num, int iterator)
 {
-	if (num == (iterator *iterator))
+	if (num == iterator * iterator)
 		return (iterator);
 	if (iterator > (num / 2))
 		return (-1);
