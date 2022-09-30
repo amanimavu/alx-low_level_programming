@@ -13,7 +13,7 @@ int check_prime(int num, int iterator)
 		return (0);
 	if (iterator == (num - 1))
 		return (1);
-	check_prime(num, iterator + 1);
+	return (check_prime(num, iterator + 1));
 }
 
 /**
