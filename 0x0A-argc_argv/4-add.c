@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			{
 				sum += atoi(argv[i]);
 			}
-			if (*argv[i] != 48 && !atoi(argv[i]))
+			if ((*argv[i] != 48 && !atoi(argv[i])) || *argv[i] < 48)
 			{
 				printf("Error\n");
 				return (1);
