@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * mynameis - prints the name of the program assigned to
+ * main - prints the name of the program assigned to
  * it when called on the terminal
  * @argc: count of command line arguments
  * @argv: array of command line arguments
