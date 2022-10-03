@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 			if (*argv[i] != 48 && !atoi(argv[i]))
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 		}
 		printf("%d\n", sum);
