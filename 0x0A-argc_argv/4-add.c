@@ -22,15 +22,15 @@ int main(int argc, char *argv[])
 			{
 				sum += atoi(argv[i]);
 			}
-			if ((*argv[i] != 48 && !atoi(argv[i])) || *argv[i] < 48)
+			if (*argv[i] != 48 && !atoi(argv[i]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		printf("%d\n", sum);
+		printf("%i\n", sum);
 	}
-	else
+	if (argc < 2)
 	{
 		printf("0\n");
 	}
