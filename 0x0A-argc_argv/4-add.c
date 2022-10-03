@@ -19,11 +19,11 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]))
+			if (atoi(argv[i]) || *argv[i] == 48)
 			{
 				sum += atoi(argv[i]);
 			}
-			else
+			if (*argv[i] != 48 && !atoi(argv[i]))
 			{
 				printf("Error\n");
 				return (0);
