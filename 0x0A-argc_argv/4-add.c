@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		char *endptr;
+
 		sum += strtol(argv[i], &endptr, 10);
 		if (*endptr != '\0')
 		{
