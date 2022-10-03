@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * main - displays the result of summation of 2 numbers
  * @argc: command line argument count
  * @argv: 1-D array of command line arguments
- * Return: alway 0
+ * Return: 0 when the program is sucess 1 when error is met
  */
 
 int main(int argc, char *argv[])
