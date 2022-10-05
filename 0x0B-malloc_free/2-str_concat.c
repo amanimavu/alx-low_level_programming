@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * str_concat - joins 2 strings, s2 to s1
