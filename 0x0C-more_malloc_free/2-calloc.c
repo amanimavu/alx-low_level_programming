@@ -12,7 +12,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
-	unsigned int space, i;
+	unsigned int space;
 
 	space = nmemb * size;
 	if (nmemb == 0 || size == 0)
