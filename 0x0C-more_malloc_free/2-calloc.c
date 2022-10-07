@@ -2,18 +2,17 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates a memory in space and initializes the
- * memory with 0
- * @nmemb: number of elements to be held in the memory
- * @size: size of each element in bytes
- *
+ * _calloc - allocates memory and initializes the memory
+ * with 0
+ * @nmemb: number of elements in the memory
+ * @size: size of each element in the memory
  * Return: pointer to the allocated memory
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
-	unsigned int space;
+	unsigned int space, i;
 
 	space = nmemb * size;
 	if (nmemb == 0 || size == 0)
@@ -25,6 +24,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	memset(ptr, 0, nmemb);
+	memset(ptr, 0, space);
 	return (ptr);
 }
