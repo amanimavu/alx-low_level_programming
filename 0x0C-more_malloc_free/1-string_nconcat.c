@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (i < len_s1)
 			*(joint + i) = *(s1 + i);
-		if (i >= len_s1)
+		if (i >= len_s1 && i < space - 1)
 			*(joint + i) = *(s2 + (i - len_s1));
 		if (i == space - 1)
 			*(joint + i) = '\0';
