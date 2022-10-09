@@ -7,9 +7,22 @@
  * Return: pointer to pointers of integers
  */
 
+
+/*
+ * 0 0 0
+ * 0 0 0
+ * 0 0 0
+ *
+ * [ [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+ * [[], [], []] => width == 0
+ * [] if height == 0
+ *
+ * [[], [], [] ]
+ */
+
 int **alloc_grid(int width, int height)
 {
-	int **arr;
+	int **arr; /*[[0, 0, ...., 0], ..., [0, 0, ..., 0]]*/
 	int i, j;
 
 	if (height <= 0 || width <= 0)
@@ -17,10 +30,10 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	arr = malloc(height * sizeof(int *));
-	if (!arr)
+	if (arr == NULL)
 	{
 
-		free(arr);
+		/*free(arr);*/
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
@@ -29,16 +42,16 @@ int **alloc_grid(int width, int height)
 		if (arr[i] == NULL)
 		{
 			i--;
-			while (i > 0)
+			for (; i <= 0; i--)
 			{
 				free(arr[i]);
-				i--;
 			}
 			free(arr);
 			return (NULL);
 		}
 		for (j = 0; j < width; j++)
 		{
+			/*[[1 , 2, 3]]*/
 			arr[i][j] = 0;
 		}
 	}
