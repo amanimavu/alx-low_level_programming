@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_times_table(int n);
 int _abs(int);
 int add(int, int);
 int _islower(int c);
