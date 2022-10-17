@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	float f;
 
 	va_start(ap, format);
-	while (counter < strlen(format) && format != NULL)
+	while (format != NULL && counter < strlen(format))
 	{
 		temp = *(format + counter);
 		switch (temp)
