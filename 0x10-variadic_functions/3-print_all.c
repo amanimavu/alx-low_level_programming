@@ -11,7 +11,7 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list ap;
+	va_list ap;/*ap - argument poiter*/
 	char c, temp, *str;
 	int i;
 	size_t counter = 0;
@@ -33,10 +33,9 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(ap, char*);
-				if (str)
-					printf("%s", str);
-				else
-					printf("(nil)");
+				if (!str)
+					str = "(nil)";
+				printf("%s", str);
 				break;
 			case 'f':
 				f = va_arg(ap, double);
