@@ -28,7 +28,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	else
 	{
 		for (count = 0; count < idx - 1; count++)
+		{
 			node_bfr_idx = node_bfr_idx->next;
+			if (!node_bfr_idx)
+				return (NULL);
+		}
 
 		node_aft_idx = node_bfr_idx->next;
 		node_bfr_idx->next = new_node;
