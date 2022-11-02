@@ -14,7 +14,7 @@ void print_binary(unsigned long int n)
 
 	for (i = 31; i >= 0; i--)
 	{
-		if ((1 << i) <= n)
+		if ((1u << i) <= n || i == 0)
 		{
 			if (n & (1 << i))
 				printf("1");
