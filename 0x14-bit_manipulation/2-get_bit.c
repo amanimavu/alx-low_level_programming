@@ -10,12 +10,10 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int len;
-	unsigned long int n_copy = n;
+	unsigned int long upper_limit;
 
-	for (len = 0; n_copy != 0; len++)
-		n_copy >>= 1;
-	if (index >= len)
+	upper_limit = sizeof(unsigned long int) * 8;
+	if (index >= upper_limit)
 		return (-1);
 	if ((n >> index) & 1)
 		return (1);
