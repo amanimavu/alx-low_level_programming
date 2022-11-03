@@ -19,12 +19,9 @@ void print_binary(unsigned long int n)
 		printf("0");
 	for (i = j - 1; i >= 0; i--)
 	{
-		if ((1u << i) <= n || i == 0)
-		{
-			if (n & (1 << i))
-				printf("1");
-			else
-				printf("0");
-		}
+		if (n >> i & 1)
+			printf("1");
+		else
+			printf("0");
 	}
 }
