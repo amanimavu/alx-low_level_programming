@@ -10,7 +10,7 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int len;
+	unsigned long int len;
 	unsigned long int n_copy = n;
 
 	for (len = 0; n_copy != 0; len++)
