@@ -10,9 +10,13 @@
 
 void print_binary(unsigned long int n)
 {
-	int i;
+	int i, j;
 
-	for (i = 31; i >= 0; i--)
+	for (j = 0; m != 0; j++)
+		m >>= 1;
+	if (n == 0)
+		printf("0");
+	for (i = j - 1; i >= 0; i--)
 	{
 		if ((1u << i) <= n || i == 0)
 		{
