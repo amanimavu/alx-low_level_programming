@@ -11,6 +11,7 @@
 void print_binary(unsigned long int n)
 {
 	int i, j;
+	unsigned long int m = n;
 
 	for (j = 0; m != 0; j++)
 		m >>= 1;
