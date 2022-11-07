@@ -18,6 +18,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	ssize_t bytes_read, bytes_written;
 	char *buf = malloc(sizeof(char) * letters);
+	mode_t mode = S_IRUSR | S_IRGRP | S_IROTH;
+
 	if (!buf)
 		return (0);
 
@@ -25,10 +27,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (0);
 
-	/* open the file specified by the filename
+	/**
+	 * open the file specified by the filename
 	 * return 0 if an error occured
 	 */
-	fd = open(filename, O_RDONLY, 0600);
+	fd = open(filename, O_RDONLY, mode);
 	if (fd == -1)
 		return (0);
 
@@ -47,8 +50,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	 * return 0 if bytes written are not equal to bytes read
 	 * and if an error occured when writeing to stdout
 	 */
-	bytes_written = write(STDOUT_FILENO, buf, letters);
-	if (letters != (size_t)bytes_written || bytes_written == -1)
+	bytes_written = write(STDOUT_FILENO, buf, bytes_read);
+	if (bytes_written == -1 || bytes_written != bytes_read)
 		return (0);
 	return (bytes_written);
 }
