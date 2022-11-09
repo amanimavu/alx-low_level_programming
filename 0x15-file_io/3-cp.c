@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		}
 		if (bytes_read == 0)
 			break;
-		bytes_written = write(fd_2, buf, 1024);
+		bytes_written = write(fd_2, buf, bytes_read);
 		if (bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
