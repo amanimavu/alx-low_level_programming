@@ -14,32 +14,34 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	unsigned int count;
 
 	current_node = *head;
+	if (current_node && index == 0)
+	{
+		next_node = current_node->next;
+		free(current_node);
+		if (next_node)
+			next_node->prev = NULL;
+		*head = next_node;
+		return (1);
+	}
 	count = 0;
 	while (current_node)
 	{
-		if (index == 0)
-		{
-			next_node = current_node->next;
-			free(current_node);
-			if (next_node)
-				next_node->prev = NULL;
-			*head = next_node;
-			return (1);
-		}
 		if (count == index)
 		{
-			next_node = current_node->next;
-			current_node = current_node->prev;
-			free(current_node->next);
-			current_node->next = next_node;
-			next_node->prev = current_node;
-			return (1);
-		}
-		if (!(current_node->next))
-		{
-			current_node = current_node->prev;
-			free(current_node->next);
-			current_node->next = NULL;
+			if (!(current_node->next))
+			{
+				current_node = current_node->prev;
+				free(current_node->next);
+				current_node->next = NULL;
+			}
+			else
+			{
+				next_node = current_node->next;
+				current_node = current_node->prev;
+				free(current_node->next);
+				current_node->next = next_node;
+				next_node->prev = current_node;
+			}
 			return (1);
 		}
 		current_node = current_node->next;
