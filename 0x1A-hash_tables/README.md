@@ -11,4 +11,4 @@ I worked on in this project.
 <br>
 
 To get the full implemenattion of python dictionaries. Check the
-link: [ how dictionaries are implemented in Python 2.7 ] (http://www.laurentluce.com/posts/python-dictionary-implementation/)
+link: [how dictionaries are implemented in Python 2.7](http://www.laurentluce.com/posts/python-dictionary-implementation/)
