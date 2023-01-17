@@ -10,10 +10,6 @@
  * @next: A pointer to the next node of the List
  */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
-
 typedef struct hash_node_s
 {
 	char *key;
@@ -35,6 +31,9 @@ typedef struct hash_table_s
 	hash_node_t **array;
 } hash_table_t;
 
+#include <stdlib.h>
+#include <stddef.h>
+#include <stdio.h>
 hash_table_t *hash_table_create(unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 
