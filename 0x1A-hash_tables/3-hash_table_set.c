@@ -22,8 +22,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *head_node;
 	unsigned long int size;
 
+	if (!ht)
+		return (0);
 	size = ht->size;
 	head_node = malloc(sizeof(hash_node_t));
+	if (!head_node)
+		return (0);
 	if (!key)
 		return (0);
 
