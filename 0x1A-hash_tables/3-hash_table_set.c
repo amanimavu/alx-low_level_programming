@@ -25,21 +25,26 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!ht)
 		return (0);
 	size = ht->size;
-	head_node = malloc(sizeof(hash_node_t));
-	if (!head_node)
-		return (0);
 	if (!key)
 		return (0);
 
 	index = key_index((unsigned char *)key, size);
 
 	dup_value = strdup(value);
-	head_node->key = strdup(key);
-	head_node->value = dup_value;
 	if (ht->array[index] && (ht->array[index])->key == key)
-		head_node->next = NULL;
+	{
+		head_node = ht->array[index];
+		head_node->value = dup_value;
+	}
 	else
+	{
+		head_node = malloc(sizeof(hash_node_t));
+		if (!head_node)
+			return (0);
+		head_node->value = dup_value;
+		head_node->key = strdup(key);
 		head_node->next = ht->array[index];
+	}
 	ht->array[index] = head_node;
 
 	return (1);
