@@ -36,7 +36,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	dup_value = strdup(value);
 	head_node->key = strdup(key);
 	head_node->value = dup_value;
-	head_node->next = ht->array[index];
+	if (ht->array[index] && (ht->array[index])->key == key)
+		head_node->next = NULL;
+	else
+		head_node->next = ht->array[index];
 	ht->array[index] = head_node;
 
 	return (1);
