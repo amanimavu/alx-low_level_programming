@@ -44,8 +44,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		head_node->value = dup_value;
 		head_node->key = strdup(key);
 		head_node->next = ht->array[index];
+		ht->array[index] = head_node;
 	}
-	ht->array[index] = head_node;
 
 	return (1);
 }
