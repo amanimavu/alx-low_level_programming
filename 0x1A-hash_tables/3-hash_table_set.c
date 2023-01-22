@@ -31,7 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index((unsigned char *)key, size);
 
 	dup_value = strdup(value);
-	if (ht->array[index] && (ht->array[index])->key == key)
+	if (ht->array[index] && !strcmp((ht->array[index])->key, key))
 	{
 		head_node = ht->array[index];
 		head_node->value = dup_value;
