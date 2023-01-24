@@ -26,13 +26,14 @@ void hash_table_print(const hash_table_t *ht)
 				printf("'%s': ", node->key);
 				printf("'%s'", node->value);
 				node = node->next;
-			}
-			for (i = index + 1; i < size; i++)
-			{
-				if (ht->array[i])
+
+				for (i = index + 1; i < size; i++)
 				{
-					printf(", ");
-					break;
+					if (ht->array[i])
+					{
+						printf(", ");
+						break;
+					}
 				}
 			}
 		}
