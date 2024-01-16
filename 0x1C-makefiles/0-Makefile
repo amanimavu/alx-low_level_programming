@@ -1,9 +1,11 @@
 objects = school.o main.o
 
-school : $(objects)
+all : $(objects)
 	cc -o school $(objects)
-
 school.o : m.h school.c
 	cc -c school.c
 main.o : m.h main.c
 	cc -c main.c
+.PHONY: clean
+clean: 
+	-rm school $(objects)
