@@ -16,6 +16,7 @@ utility: island_perimeter function
 importation of modules is not allowed
 """
 
+
 def island_perimeter(grid):
     """
     parameters:
@@ -30,8 +31,10 @@ def island_perimeter(grid):
     1. perimeter - perimeter of the island described in grid
 
     constraints:
-    * Grid is completely surrounded by water, and there is one island (or nothing)
-    * The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island)
+    * Grid is completely surrounded by water,
+    * and there is one island (or nothing)
+    * The island doesn’t have “lakes”
+    * (water inside that isn’t connected to the water around the island)
     """
     perimeter = 0
     width = len(grid)
