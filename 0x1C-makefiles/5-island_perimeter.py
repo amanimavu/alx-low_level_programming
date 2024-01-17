@@ -47,22 +47,22 @@ def island_perimeter(grid):
             break
         for cell in range(0, length):
             if grid[row][cell]:
-                if(cell < length-1):
+                if (cell < length - 1):
                     if grid[row][cell + 1] == 0:
                         perimeter += 1
                 else:
                     perimeter += 1
-                if(cell > 0):
+                if (cell > 0):
                     if grid[row][cell - 1] == 0:
                         perimeter += 1
                 else:
                     perimeter += 1
-                if(row < width-1):
+                if (row < width - 1):
                     if grid[row+1][cell] == 0:
                         perimeter += 1
                 else:
                     perimeter += 1
-                if(row > 0):
+                if (row > 0):
                     if grid[row-1][cell] == 0:
                         perimeter += 1
                 else:
