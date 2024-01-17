@@ -9,7 +9,29 @@
 # if the perimeter > 0, but the current row is 0 only, end the outer loop
 # In a cell, for any side with a 0, add 1 to the perimeter
 
+"""
+module name: 5-island_perimeter
+utililties: island_perimeter function
+
+* no module should be imported
+"""
+
 def island_perimeter(grid):
+        """
+        The purpose of this function is to calculate the perimeter
+        of an island if it exists in the grid
+
+        parameters:
+        1. grid - is a list of list of integers:
+            * 0 represents a water zone
+            * 1 represents a land zone
+            * One cell is a square with side length 1
+            * Grid cells are connected horizontally/vertically (not diagonally)
+            * Grid is rectangular, width and height don’t exceed 100
+
+        Grid is completely surrounded by water, and there is one island (or nothing).
+        The island doesn’t have “lakes” (water inside that isn’t connected to the water around the island)
+        """
         perimeter = 0 
         w = len(grid)
         l = len(grid[0])
