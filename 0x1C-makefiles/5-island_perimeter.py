@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # define a variable and name it perimeter
 # get the width of the grid by getting the length of the outer list, w
 # get the length of the grid by getting the length of the inner list, l
